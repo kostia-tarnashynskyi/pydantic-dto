@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class NotificationDTO(BaseModel):
@@ -11,6 +11,4 @@ class NotificationDTO(BaseModel):
     is_read: bool = Field(default=False, description="Notification read status")
     created_at: str = Field(..., description="Creation timestamp")
 
-    class Config:
-        from_attributes = True
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
