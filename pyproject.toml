@@ -1,18 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.26.3"]
+build-backend = "hatchling.build"
+
 [project]
 name = "pydantic-dto"
 version = "0.1.0"
-description = "Add your description here"
+description = "Pydantic DTO decorators and helpers"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "bump2version>=1.0.1",
-    "pydantic>=2.11.7",
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE.txt"]
+authors = [
+    { name = "Kostia Tarnashynskyi", email = "kostia.tarnashynskyi@gmail.com"}
+]
+keywords = ["dto", "pydantic", "python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
 ]
 
+dependencies = [
+    "pydantic>=2.11.7",
+]
 [dependency-groups]
 dev = [
     "pre-commit>=4.3.0",
+    "bump2version>=1.0.1",
 ]
 test = [
     "pytest>=8.4.1",
 ]
+
+[project.urls]
+homepage = "https://github.com/kostia-tarnashynskyi/pydantic-dto"
+repository = "https://github.com/kostia-tarnashynskyi/pydantic-dto"
