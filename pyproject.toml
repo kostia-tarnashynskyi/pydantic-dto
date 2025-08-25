@@ -1,0 +1,17 @@
+[project]
+name = "pydantic-dto"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.11.7",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.3.0",
+]
+test = [
+    "pytest>=8.4.1",
+]
