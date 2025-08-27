@@ -12,3 +12,4 @@ class NotificationDTO(BaseModel):
     icon: str | None = Field(default=None)
     is_read: bool = Field(default=False, description="Notification read status")
     created_at: str = Field(..., description="Creation timestamp")
+    updated_at: str = Field(..., description="Last update timestamp")
